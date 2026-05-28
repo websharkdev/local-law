@@ -1,0 +1,124 @@
+{
+  "Company": {
+    "name": "LocalLaw",
+    "accent": "AI"
+  },
+  "Common": {
+    "roles": {
+      "buyer": "Buyer",
+      "supplier": "Supplier"
+    },
+    "title": "Supplier Portal",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "notFound": "Page not found",
+    "actions": {
+      "cancel": "Cancel",
+      "saveChanges": "Save Changes",
+      "saveAsDraft": "Save as Draft",
+      "submit": "Submit",
+      "confirm": "Confirm",
+      "tryAgain": "Try again",
+      "backToLogin": "Back to Log in",
+      "goBack": "Go Back"
+    },
+    "language": {
+      "en": "English",
+      "fi": "Finnish",
+      "de": "German",
+      "sv": "Swedish"
+    },
+    "password": {
+      "show": "Show password",
+      "hide": "Hide password"
+    },
+    "DataTable": {
+      "all": "All",
+      "allRfqs": "All RFQs",
+      "search": "Search",
+      "emptyTitle": "No entries found",
+      "emptyMessage": "No entries found.",
+      "rfqEmpty": "No RFQs found for the current filters.",
+      "entriesEmpty": "Showing 0-0 of 0 entries",
+      "entriesRange": "Showing {start}-{end} of {total} entries"
+    },
+    "Status": {
+      "active": {
+        "label": "Active",
+        "description": "Sent to suppliers, open for responses"
+      },
+      "needs-action": {
+        "label": "Needs Action",
+        "description": "New activity that needs review"
+      },
+      "submitted": {
+        "label": "Submitted",
+        "description": "The supplier has confirmed the quote"
+      },
+      "invited": {
+        "label": "Invited",
+        "description": "The supplier has not yet confirmed the quote"
+      },
+      "declined": {
+        "label": "Declined",
+        "description": "The supplier or buyer has rejected the quote"
+      },
+      "agreement-draft": {
+        "label": "Draft",
+        "description": "After the award, a draft agreement is automatically generated"
+      },
+      "sent-to-supplier": {
+        "label": "Sent to supplier",
+        "description": "Sent to supplier"
+      },
+      "accepted-by-supplier": {
+        "label": "Accepted by supplier",
+        "description": "Accepted by supplier"
+      },
+      "declined-by-supplier": {
+        "label": "Declined by supplier",
+        "description": "The supplier has rejected the agreement"
+      },
+      "sent-to-boss": {
+        "label": "Sent to boss",
+        "description": "Sent to boss"
+      },
+      "approved-by-boss": {
+        "label": "Approved by boss",
+        "description": "Accepted by boss"
+      },
+      "declined-by-boss": {
+        "label": "Declined by boss",
+        "description": "The boss has declined the agreement"
+      },
+      "draft": {
+        "label": "Draft",
+        "description": "Saved but not yet sent to suppliers"
+      },
+      "closed": {
+        "label": "Closed",
+        "description": "Supplier selected"
+      },
+      "cancelled": {
+        "label": "Cancelled",
+        "description": "Closed without selection"
+      }
+    },
+    "errorPage": {
+      "title": "Something went wrong",
+      "description": "An unexpected error occurred. We've been notified and are working on a fix."
+    },
+    "notFoundPage": {
+      "title": "Page not found",
+      "description": "We couldn't find the page you're looking for. It might have been moved or doesn't exist anymore.",
+      "backHome": "Back to home"
+    },
+    "actionsLabel": "Actions",
+    "passwordStrength": {
+      "veryWeak": "Very Weak",
+      "weak": "Weak",
+      "medium": "Medium",
+      "strong": "Strong"
+    }
+  }
+}

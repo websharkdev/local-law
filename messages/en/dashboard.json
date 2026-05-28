@@ -1,0 +1,153 @@
+{
+  "Dashboard": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "archive": "Archive"
+    },
+    "header": {
+      "archive": "Archive",
+      "welcomeBack": "Welcome back, {name}!",
+      "createRfq": "Create RFQ"
+    },
+    "actions": {
+      "createRfq": {
+        "title": "Start RFQ process",
+        "description": "Create a Request for Quotation (RFQ) to receive supplier quotes",
+        "cta": "Create RFQ"
+      },
+      "addAgreement": {
+        "title": "Create agreement",
+        "description": "Draft and formalize an agreement with a selected supplier",
+        "cta": "Add Agreement"
+      }
+    },
+    "kpis": {
+      "allRfqs": "All RFQs",
+      "allRfqsDescription": "All RFQs across every status",
+      "filterBy": "Filter table by {label}",
+      "view": "View {label}"
+    },
+    "table": {
+      "columns": {
+        "name": "Name",
+        "supplierResponses": "Supplier Responses",
+        "budget": "Budget",
+        "deadline": "Deadline",
+        "status": "Status",
+        "lastUpdated": "Last Updated"
+      },
+      "filters": {
+        "all": "All",
+        "allRfqs": "All RFQs"
+      },
+      "rowActions": {
+        "overview": "Overview",
+        "reviewQuotes": "Review Quotes",
+        "awardSupplier": "Award Supplier",
+        "inviteMoreSuppliers": "Invite More Suppliers",
+        "closeRfq": "Close RFQ",
+        "duplicate": "Duplicate"
+      },
+      "empty": "No RFQs found for the current filters.",
+      "supplierResponses": {
+        "agree": "Agree",
+        "waiting": "Waiting",
+        "noResponses": "No responses yet",
+        "noPending": "No pending suppliers"
+      }
+    },
+    "notifications": {
+      "open": "Open notifications",
+      "title": "Notifications",
+      "markAllRead": "Mark all notifications as read",
+      "settings": "Notification settings",
+      "close": "Close notifications",
+      "tabs": {
+        "all": "All",
+        "unread": "Unread"
+      },
+      "days": {
+        "today": "Today",
+        "yesterday": "Yesterday"
+      },
+      "items": {
+        "newQuoteReceived": {
+          "title": "New quote received",
+          "description": "Supplier C submitted a quote for RFQ-001"
+        },
+        "approvalPending": {
+          "title": "Approval pending",
+          "description": "RFQ-002 requires your approval"
+        },
+        "deadlineApproaching": {
+          "title": "Deadline approaching",
+          "description": "RFQ-003 deadline in 2 days"
+        }
+      }
+    },
+    "userMenu": {
+      "settings": "Account Settings",
+      "signOut": "Sign Out"
+    },
+    "supplier": {
+      "title": "Supplier Dashboard"
+    },
+    "chat": {
+      "breadcrumb": "AI Chat",
+      "searchPlaceholder": "Search",
+      "notifications": "Notifications",
+      "settings": "Settings",
+      "welcome": {
+        "titlePrefix": "How",
+        "titleAccent": "can I help you",
+        "titleSuffix": "today?"
+      },
+      "composer": {
+        "attachFile": "Attach file",
+        "placeholder": "Ask about UAE laws...",
+        "send": "Send message",
+        "disclaimer": "AI responses are informational only. Verify with a legal professional."
+      },
+      "recent": {
+        "newConversation": "New Conversation",
+        "title": "Recent Chats",
+        "openMenu": "Open chat options",
+        "saved": "Saved",
+        "rename": "Rename",
+        "delete": "Delete"
+      }
+    },
+    "user": {
+      "aiChat": {
+        "badge": "AI Chat",
+        "titlePrefix": "How",
+        "titleAccent": "can I help you",
+        "titleSuffix": "today?",
+        "latestMessage": "Drafted: {message}",
+        "attachFile": "Attach file",
+        "placeholder": "Ask about UAE laws...",
+        "send": "Send message"
+      }
+    },
+    "sidebar": {
+      "expand": "Expand sidebar",
+      "collapse": "Collapse sidebar",
+      "signOut": "Sign out",
+      "signOutError": "Could not sign out. Please try again.",
+      "sections": {
+        "services": "Services",
+        "mySpace": "My Space"
+      },
+      "items": {
+        "aiChat": "AI Chat",
+        "dashboard": "Dashboard",
+        "documents": "Documents",
+        "lawyers": "Lawyers",
+        "notary": "Notary",
+        "legalTranslation": "Legal Translation",
+        "browseLaws": "Browse Laws",
+        "saved": "Saved"
+      }
+    }
+  }
+}

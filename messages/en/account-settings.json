@@ -1,0 +1,84 @@
+{
+  "AccountSettings": {
+    "title": "Account Settings",
+    "tabs": {
+      "profile": "Profile",
+      "notifications": "Notifications"
+    },
+    "profile": {
+      "title": "Personal Info",
+      "success": "Profile updated successfully.",
+      "firstName": "Contact First Name",
+      "firstNamePlaceholder": "Enter first name",
+      "lastName": "Contact Last Name",
+      "lastNamePlaceholder": "Enter last name",
+      "email": "Email",
+      "phone": "Phone",
+      "avatar": "Avatar",
+      "editAvatar": "Edit avatar",
+      "avatarSuccess": "Avatar updated successfully."
+    },
+    "password": {
+      "title": "Change Password",
+      "current": "Current Password",
+      "next": "New Password",
+      "confirm": "Confirm New Password",
+      "success": "Password updated successfully."
+    },
+    "language": {
+      "title": "Language",
+      "description": "Choose the language you'd like to use with SupplierPortal",
+      "label": "Language",
+      "placeholder": "Select language"
+    },
+    "notifications": {
+      "title": "Notification Preferences",
+      "inApp": "In-App",
+      "email": "Email",
+      "aria": "{title} {channel} notifications",
+      "groups": {
+        "quotes": "Quotes",
+        "agreement": "Agreement",
+        "clarification": "Clarification"
+      },
+      "rows": {
+        "newQuoteReceived": {
+          "title": "New quote received",
+          "description": "A supplier has submitted a quote"
+        },
+        "quoteUpdatedOrWithdrawn": {
+          "title": "Quote updated or withdrawn",
+          "description": "A supplier has updated or withdrawn their quote"
+        },
+        "agreementResponse": {
+          "title": "Agreement response",
+          "description": "A supplier has accepted or declined the agreement"
+        },
+        "newClarificationRequest": {
+          "title": "New clarification request",
+          "description": "A supplier has asked a question"
+        },
+        "clarificationResponse": {
+          "title": "Clarification response",
+          "description": "A supplier has responded to your question"
+        }
+      }
+    },
+    "deleteAccount": {
+      "trigger": "Delete Account",
+      "title": "Delete account?",
+      "close": "Close delete account dialog",
+      "description": "Your account will be permanently deleted. This action cannot be undone.",
+      "emailLabel": "Please type your account email",
+      "passwordLabel": "Confirm your password",
+      "phraseLabel": "To proceed, type \"{phrase}\" in the input field below",
+      "dataDeletion": "I understand that my account and all associated data will be permanently deleted and cannot be recovered",
+      "activeItems": "I understand that all active RFQs, quotes, and agreements will be canceled and cannot be restored"
+    },
+    "uploadAvatar": {
+      "title": "Change Avatar",
+      "save": "Save Avatar",
+      "back": "Back"
+    }
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "Buyer": {
+    "CreateRfq": {
+      "title": "Create a new RFQ",
+      "description": "Provide the key details and invite suppliers to submit their quotes.",
+      "preview": "Preview",
+      "togglePreview": "Toggle RFQ preview",
+      "close": "Close create RFQ dialog",
+      "send": "Send RFQ",
+      "previewFallbackTitle": "Widget Brackets Procurement",
+      "previewFallbackDescription": "Description...",
+      "sections": {
+        "rfq": "RFQ",
+        "details": "Details",
+        "questions": "Additional Questions (Optional)",
+        "requirements": "Requirements & Notes (Optional)",
+        "attachments": "Attachments",
+        "suppliers": "Suppliers"
+      },
+      "fields": {
+        "rfqTitle": "RFQ Title",
+        "rfqTitlePlaceholder": "e.g., Widget Brackets Procurement",
+        "description": "Description",
+        "descriptionPlaceholder": "Enter procurement requirements, specifications...",
+        "budget": "Budget",
+        "deadline": "Deadline",
+        "lineItems": "Line Items",
+        "visibleToSupplier": "Visible to supplier",
+        "pickDeadline": "Pick deadline date"
+      },
+      "prompts": {
+        "addQuestion": "Add Question",
+        "questionPlaceholder": "Your question",
+        "addRequirement": "Add Requirement",
+        "requirementPlaceholder": "Your requirement"
+      },
+      "lineItems": {
+        "item": "Item",
+        "specifications": "Specifications",
+        "qty": "Qty",
+        "price": "Price",
+        "total": "Total",
+        "addRow": "Add a Row",
+        "remove": "Remove {item}"
+      },
+      "suppliers": {
+        "placeholder": "Add supplier email...",
+        "remove": "Remove {email}",
+        "add": "Add \"{email}\""
+      },
+      "emailPreview": {
+        "newRfq": "New RFQ",
+        "dearSupplier": "Dear [Supplier],",
+        "viewDetails": "View RFQ Details",
+        "regards": "Best Regards,",
+        "footer": "A simpler way to manage RFQs and supplier agreements."
+      }
+    },
+    "AddAgreement": {
+      "title": "Add Agreement",
+      "description": "Attach an agreement to an existing RFQ",
+      "close": "Close add agreement dialog",
+      "sendToBoss": "Send to Boss",
+      "sections": {
+        "rfq": "RFQ",
+        "summary": "Agreement summary",
+        "contract": "Contract",
+        "approval": "Approval & Sending"
+      },
+      "fields": {
+        "supplier": "Supplier",
+        "selectRfq": "Select RFQ",
+        "selectSupplier": "Select Supplier",
+        "bossEmail": "Boss email",
+        "bossEmailPlaceholder": "1230example@gmail.com"
+      },
+      "summary": {
+        "intro": "Based on your RFQ details and supplier clarification, these additional terms will be included in the agreement.",
+        "totalPrice": "Total Price",
+        "deadline": "Deadline",
+        "lineItems": "Line Items",
+        "requirements": "Requirements & Notes",
+        "note1": "All materials must comply with ISO 9001 standards",
+        "note2": "Using protective industrial packaging"
+      },
+      "approval": {
+        "required": "Internal approval required",
+        "description": "If enabled, the agreement goes to your boss/approver before the supplier is notified.",
+        "removeBossEmail": "Remove boss email"
+      }
+    },
+    "RfqDetail": {
+      "quotesViewTitle": "Quotes",
+      "quotesCompare": "Compare",
+      "quotesListView": "List View",
+      "tabs": {
+        "overview": "Overview",
+        "quotes": "Quotes",
+        "agreement": "Agreement"
+      },
+      "actions": {
+        "closeRfq": "Close RFQ",
+        "inviteSuppliers": "Invite Suppliers"
+      },
+      "backToDashboardAria": "Back to buyer dashboard",
+      "closeDialog": {
+        "title": "Close RFQ",
+        "bodyLead": "Are you sure you want to close this RFQ?",
+        "bodyDetail": "This will reject all supplier quotes and mark the RFQ as closed. Suppliers will be notified.",
+        "confirm": "Close RFQ"
+      },
+      "toastCloseError": "Failed to close RFQ.",
+      "sections": {
+        "summary": "RFQ Summary",
+        "quotesSnapshot": "Quotes Snapshot",
+        "attachments": "Attachments",
+        "activity": "Activity"
+      },
+      "summary": {
+        "description": "Description",
+        "budget": "Budget",
+        "deadline": "Deadline",
+        "suppliers": "Suppliers",
+        "lineItems": "Line Items",
+        "requirementsNotes": "Requirements & Notes",
+        "questions": "Questions",
+        "emptyPlaceholder": "-"
+      },
+      "lineItemsTable": {
+        "item": "Item",
+        "qty": "Qty",
+        "specifications": "Specifications",
+        "price": "Price"
+      },
+      "quotesTable": {
+        "supplier": "Supplier",
+        "budget": "Budget",
+        "deadline": "Deadline",
+        "responseStatus": "Response Status",
+        "lastUpdated": "Last Updated"
+      },
+      "compareTable": {
+        "metric": "Metric",
+        "updated": "Updated: {date}"
+      },
+      "attachments": {
+        "emptyTitle": "No files shared yet",
+        "emptySubtitle": "They'll appear here once available",
+        "downloadAria": "Download {filename}",
+        "sharedByLine": "Shared by {sharedBy} {date}"
+      },
+      "recommendation": {
+        "title": "Recommendation:",
+        "named": "Supplier {supplier} offers the best price and time",
+        "anonymous": "A supplier with the strongest quote offers the best price and time",
+        "paymentTerms": " but has extended payment terms ({terms}).",
+        "end": "."
+      }
+    },
+    "shared": {
+      "attachments": {
+        "label": "Drag & drop or click to upload",
+        "types": "PDF, DOCX",
+        "maxSize": "up to {size}MB each",
+        "browse": "Browse files",
+        "fileTooLarge": "File size is larger than {size}MB"
+      }
+    }
+  }
+}

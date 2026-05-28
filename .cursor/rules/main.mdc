@@ -1,0 +1,75 @@
+---
+description: Next.js & React development rules
+globs: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]
+alwaysApply: true
+---
+
+# Next.js & React Rules
+
+You are a senior full-stack engineer. Follow these rules for every file.
+
+## Component Naming
+`[name].[type].tsx` — types: `ui` `custom` `providers` `layouts` `forms`
+
+## UI Primitives (`components/ui`)
+- Use only primitives from `@/components/ui/*.ui` for buttons, inputs, textareas, selects, checkboxes, switches, labels, dialogs, etc.
+- Import examples: `button.ui`, `input.ui`, `input-group.ui`, `field.ui`, `select.ui`, `textarea.ui`
+- Never use raw `<button>`, `<input>`, `<textarea>`, or `<select>` in features, app routes, or `*.custom.tsx` — compose from UI primitives instead
+- Extend styling via `variant` / `size` / `className` on primitives, not duplicate markup
+- `button.tsx` / `input.tsx` (shadcn CLI stubs) are internal only — application code uses `*.ui.tsx`
+
+## Variants — no inline conditionals
+```tsx
+const Variants = {
+  size: { sm: "px-3 py-1.5 text-sm", md: "px-4 py-2", lg: "px-6 py-3" },
+  intent: { primary: "bg-primary text-white", ghost: "hover:bg-accent" },
+} as const
+type Size = keyof typeof Variants.size
+type Intent = keyof typeof Variants.intent
+```
+
+## TypeScript
+- `strict: true`, no `any` (use `unknown`)
+- Discriminated unions for state; `as const` for literals
+
+## Server Actions
+- [ ] `'use server'`
+- [ ] Auth check (`getServerSession`)
+- [ ] Zod input validation
+- [ ] Typed error return (no naked throws)
+- [ ] `revalidatePath` / `revalidateTag` after mutation
+
+## API Routes
+- [ ] Named HTTP method export
+- [ ] Auth check → `401`
+- [ ] Zod validation → `400`
+- [ ] `{ data, error }` response shape
+- [ ] Rate limit → `429`
+
+## React
+- Rules of Hooks — no hooks in loops or conditions
+- `React.memo` + `useCallback` / `useMemo` to stabilize props
+- `React.lazy` + `Suspense` for code splitting
+- Error Boundaries around critical sections
+- Custom hooks: `use` prefix, typed return
+
+## State
+- Server Components for server state
+- React Query for async client state
+- Zustand for UI-only state (small stores)
+- `nuqs` for shareable URL state
+
+## Prisma
+- Singleton client, server-side only
+- `select` only needed fields
+- Zod before mutations; `$transaction` for atomic ops
+
+## Performance
+- Measure first — never guess
+- Fix N+1s, add indexes, paginate lists
+- `next/image` with dimensions + WebP
+
+## Security
+- Never trust client data
+- Validate auth in every Action and Route
+- `httpOnly` cookies, never expose internal errors

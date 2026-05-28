@@ -1,0 +1,730 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-ink: var(--ink);
+    --color-ink-80: var(--ink-80);
+    --color-ink-70: var(--ink-70);
+    --color-ink-60: var(--ink-60);
+    --color-ink-40: var(--ink-40);
+    --color-ink-20: var(--ink-20);
+    --color-glass: var(--glass);
+    --color-app-surface: var(--app-surface);
+    --color-app-surface-alt: var(--app-surface-alt);
+    --color-primary-dark: var(--primary-dark);
+    --color-primary-soft: var(--primary-soft);
+    --color-warning: var(--warning);
+    --color-badge: var(--badge);
+    --color-gold-accent: var(--gold-accent);
+    --font-sans: var(--font-sans);
+    --font-mono: var(--font-geist-mono);
+    --font-heading: var(--font-sans);
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-success: var(--success);
+    --color-auth-surface: var(--auth-surface);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+    --shadow-ds-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-ds-soft: 0 2px 12px -9px rgba(0, 0, 0, 0.1);
+    --shadow-ds-popover: 0 4px 40px rgba(0, 0, 0, 0.12);
+}
+
+:root {
+    /* Design tokens recovered from Figma Clients-2 */
+    --primary: #ba8747;
+    --primary-dark: #634928;
+    --primary-soft: #ba87471f;
+    --primary-hover: #ba874712;
+    --ink: #1a1c21;
+    --ink-subtle: #1a1c2140;
+    --ink-80: color-mix(in srgb, var(--ink) 80%, transparent);
+    --ink-70: color-mix(in srgb, var(--ink) 70%, transparent);
+    --ink-60: color-mix(in srgb, var(--ink) 60%, transparent);
+    --ink-40: color-mix(in srgb, var(--ink) 40%, transparent);
+    --ink-20: color-mix(in srgb, var(--ink) 20%, transparent);
+    --white-80: rgba(255, 255, 255, 0.8);
+    --white-60: rgba(255, 255, 255, 0.6);
+    --white-40: rgba(255, 255, 255, 0.4);
+    --white-20: rgba(255, 255, 255, 0.2);
+    --glass: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --gold-accent: #f6c244;
+    --error: #ef4444;
+    --success: #00a611;
+    --warning: #f77b00;
+    --badge: #ed4e2b;
+    --auth-surface: #1a1c21;
+    --bg: #faf9f9;
+    --app-background: #1a1c21;
+    --app-surface: #faf9f9;
+    --app-surface-alt: #f6f5f3;
+    --app-surface-white: #ffffff;
+    --bg-ai-button: linear-gradient(91.12deg, #ba8747 0.96%, #634928 100%);
+    --border-secondary: #1a1c21;
+    --radius-xs: 6px;
+    --radius-sm-token: 8px;
+    --radius-md-token: 10px;
+    --radius-lg-token: 12px;
+    --radius-xl-token: 16px;
+    --radius-2xl-token: 20px;
+    --radius-3xl-token: 24px;
+    --radius-full: 9999px;
+    --radius-large: var(--radius-3xl-token);
+    --radius-default: var(--radius-2xl-token);
+    --radius-button: var(--radius-full);
+    --padding-default: 14px;
+    --padding-button-y: 12px;
+    --padding-button-x: 20px;
+    --padding-button-icon: 12px;
+    --padding-button-right-icon-left: 20px;
+    --padding-button-right-icon-right: 12px;
+    --padding-button-right-icon-y: 12px;
+    --shadow-ds-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-ds-soft: 0 2px 12px -9px rgba(0, 0, 0, 0.1);
+    --shadow-ds-popover: 0 4px 40px rgba(0, 0, 0, 0.12);
+    --blur-glass-sm: 8px;
+    --blur-glass-lg: 125px;
+
+    /* Used by existing component classes */
+    --danger: var(--error);
+
+    /* shadcn / app semantics */
+    --background: var(--bg);
+    --foreground: var(--ink);
+    --card: #ffffff;
+    --card-foreground: var(--ink);
+    --popover: #ffffff;
+    --popover-foreground: var(--ink);
+    --primary-foreground: #ffffff;
+    --secondary: color-mix(in srgb, var(--ink) 6%, var(--bg));
+    --secondary-foreground: var(--ink);
+    --muted: color-mix(in srgb, var(--ink) 4%, var(--bg));
+    --muted-foreground: color-mix(in srgb, var(--ink) 55%, transparent);
+    --accent: color-mix(in srgb, var(--primary) 12%, var(--bg));
+    --accent-foreground: var(--ink);
+    --destructive: var(--error);
+    --border: color-mix(in srgb, var(--ink) 12%, transparent);
+    --input: color-mix(in srgb, var(--ink) 12%, transparent);
+    --ring: color-mix(in srgb, var(--primary) 45%, transparent);
+    --chart-1: var(--primary);
+    --chart-2: var(--primary-dark);
+    --chart-3: color-mix(in srgb, var(--ink) 35%, transparent);
+    --chart-4: color-mix(in srgb, var(--ink) 55%, transparent);
+    --chart-5: var(--success);
+    --radius: var(--radius-default);
+    --sidebar: transparent;
+    --sidebar-foreground: var(--ink);
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: color-mix(in srgb, var(--ink) 6%, var(--bg));
+    --sidebar-accent-foreground: var(--ink);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--ring);
+}
+
+.dark {
+    --bg: #12141a;
+    --ink: #f4f3f1;
+    --ink-subtle: #f4f3f140;
+    --ink-80: color-mix(in srgb, var(--ink) 80%, transparent);
+    --ink-70: color-mix(in srgb, var(--ink) 70%, transparent);
+    --ink-60: color-mix(in srgb, var(--ink) 60%, transparent);
+    --ink-40: color-mix(in srgb, var(--ink) 40%, transparent);
+    --ink-20: color-mix(in srgb, var(--ink) 20%, transparent);
+    --border-secondary: #f4f3f1;
+    --primary: #c99a5a;
+    --primary-dark: #8a6a3d;
+    --primary-soft: #c99a5a1f;
+    --primary-hover: #c99a5a12;
+    --bg-ai-button: linear-gradient(91.12deg, #c99a5a 0.96%, #8a6a3d 100%);
+    --app-background: #12141a;
+    --app-surface: #1a1c24;
+    --app-surface-alt: #20232c;
+    --app-surface-white: #1a1c24;
+    --danger: var(--error);
+
+    --background: var(--bg);
+    --foreground: var(--ink);
+    --card: #1a1c24;
+    --card-foreground: var(--ink);
+    --popover: #1a1c24;
+    --popover-foreground: var(--ink);
+    --primary-foreground: #1a1c21;
+    --secondary: color-mix(in srgb, var(--ink) 8%, transparent);
+    --secondary-foreground: var(--ink);
+    --muted: color-mix(in srgb, var(--ink) 8%, transparent);
+    --muted-foreground: color-mix(in srgb, var(--ink) 65%, transparent);
+    --accent: color-mix(in srgb, var(--primary) 18%, transparent);
+    --accent-foreground: var(--ink);
+    --destructive: var(--error);
+    --border: color-mix(in srgb, var(--ink) 14%, transparent);
+    --input: color-mix(in srgb, var(--ink) 16%, transparent);
+    --ring: color-mix(in srgb, var(--primary) 50%, transparent);
+    --chart-1: var(--primary);
+    --chart-2: #8a6a3d;
+    --chart-3: color-mix(in srgb, var(--ink) 45%, transparent);
+    --chart-4: color-mix(in srgb, var(--ink) 65%, transparent);
+    --chart-5: #2ecc4a;
+    --radius: var(--radius-default);
+    --sidebar: #161822;
+    --sidebar-foreground: var(--ink);
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: #1a1c21;
+    --sidebar-accent: color-mix(in srgb, var(--ink) 10%, transparent);
+    --sidebar-accent-foreground: var(--ink);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--ring);
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+
+    html {
+        @apply font-sans;
+    }
+}
+
+@layer components {
+    .layout-row-center {
+        display: flex;
+        align-items: center;
+    }
+
+    .layout-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .layout-column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .layout-column-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .layout-between-center {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .page-center-shell {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: var(--background);
+        padding: var(--ds-16);
+        text-align: center;
+    }
+
+    .page-center-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--ds-24);
+    }
+
+    .page-icon-xl {
+        display: flex;
+        width: calc(var(--index) * 96 / 25);
+        height: calc(var(--index) * 96 / 25);
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+    }
+
+    .auth-content-stack {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--ds-24);
+    }
+
+    .auth-state-stack {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--ds-16);
+    }
+
+    .auth-icon-md,
+    .auth-icon-lg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+    }
+
+    .auth-icon-md {
+        width: calc(var(--index) * 64 / 25);
+        height: calc(var(--index) * 64 / 25);
+    }
+
+    .auth-icon-lg {
+        width: var(--ds-80);
+        height: var(--ds-80);
+    }
+
+    .auth-link-primary {
+        color: var(--primary);
+        font-size: calc(var(--index) * 16 / 25);
+        line-height: 1.4;
+        font-weight: 500;
+    }
+
+    .auth-link-primary:hover {
+        text-decoration-line: underline;
+    }
+
+    .ds-popover-surface {
+        border: 1px solid var(--border);
+        background: var(--popover);
+        color: var(--ink);
+        box-shadow: 0 var(--ds-4) var(--ds-40) color-mix(in srgb, var(--ink) 15%, transparent);
+        outline: 0;
+    }
+
+    .ds-dialog-surface {
+        border: 1px solid var(--border);
+        background: var(--card);
+        color: var(--ink);
+        box-shadow: 0 var(--ds-24) var(--ds-80) color-mix(in srgb, var(--ink) 20%, transparent);
+        outline: 0;
+    }
+
+    .ds-separator-muted {
+        background: color-mix(in srgb, var(--ink) 5%, transparent);
+    }
+
+    .flag-ring {
+        box-shadow: 0 0 0 var(--ds-1) color-mix(in srgb, var(--ink) 6%, transparent);
+    }
+
+    .ds-form-field {
+        height: var(--fluid-block-72);
+        gap: var(--ds-6);
+    }
+
+    .ds-form-input {
+        height: var(--fluid-control-46);
+        font-size: calc(var(--index) * 16 / 25);
+    }
+
+    .ds-form-label,
+    .ds-text-muted-16 {
+        font-size: calc(var(--index) * 16 / 25);
+        line-height: 1.4;
+        font-weight: 400;
+        color: var(--ink-60);
+    }
+
+    .account-settings-section {
+        gap: var(--ds-16);
+        border-radius: var(--ds-16);
+        background: color-mix(in srgb, var(--ink) 3%, transparent);
+        padding: var(--ds-16) var(--ds-20) var(--ds-20);
+    }
+
+    .ds-text-muted-13 {
+        font-size: calc(var(--index) * 13 / 25);
+        line-height: 1.4;
+        color: color-mix(in srgb, var(--ink) 60%, transparent);
+    }
+
+    .ds-text-muted-16 {
+        font-size: calc(var(--index) * 16 / 25);
+        line-height: 1.4;
+        color: color-mix(in srgb, var(--ink) 60%, transparent);
+    }
+
+    .ds-text-soft-12 {
+        font-size: calc(var(--index) * 12 / 25);
+        line-height: 1.4;
+        color: color-mix(in srgb, var(--ink) 45%, transparent);
+    }
+
+    .ds-text-overflow {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .ds-menu-action:hover {
+        background: color-mix(in srgb, var(--ink) 5%, transparent);
+    }
+
+    .ds-menu-action-danger {
+        color: var(--danger);
+    }
+
+    .ds-menu-action-danger:hover {
+        background: color-mix(in srgb, var(--danger) 6%, transparent);
+        color: var(--danger);
+    }
+
+    .ds-toolbar-icon-muted {
+        width: calc(var(--index) * 19 / 25);
+        height: calc(var(--index) * 19 / 25);
+        color: color-mix(in srgb, var(--ink) 60%, transparent);
+    }
+
+    .ds-toolbar-icon-muted:hover {
+        background: transparent;
+    }
+
+    .ds-table-toolbar {
+        display: flex;
+        min-height: var(--ds-80);
+        flex-direction: column;
+        gap: var(--ds-20);
+        padding: var(--ds-20) var(--ds-24);
+    }
+
+    .ds-table-footer {
+        display: flex;
+        flex-direction: column;
+        gap: var(--ds-16);
+        padding: var(--ds-20) var(--ds-24);
+    }
+
+    .error-recovery-button {
+        display: flex;
+        align-items: center;
+        gap: var(--ds-8);
+        border: 0;
+        border-radius: var(--ds-12);
+        background: var(--primary);
+        padding: var(--ds-12) var(--ds-24);
+        color: var(--primary-foreground);
+        font-size: var(--ds-16);
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .error-recovery-button:hover {
+        background: var(--primary-dark);
+    }
+
+    @media (min-width: 40rem) {
+        .ds-table-footer {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    @media (min-width: 64rem) {
+        .ds-table-toolbar {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+
+/* Dynamic Size utilities — fluid index capped to the 25px design base */
+@layer base {
+    :root {
+        --index: calc(1vw + 1vh);
+        --ds-1: calc(var(--index) * 1 / 25);
+        --ds-2: calc(var(--index) * 2 / 25);
+        --ds-3: calc(var(--index) * 3 / 25);
+        --ds-4: calc(var(--index) * 4 / 25);
+        --ds-5: calc(var(--index) * 5 / 25);
+        --ds-6: calc(var(--index) * 6 / 25);
+        --ds-8: calc(var(--index) * 8 / 25);
+        --ds-10: calc(var(--index) * 10 / 25);
+        --ds-12: calc(var(--index) * 12 / 25);
+        --ds-14: calc(var(--index) * 14 / 25);
+        --ds-16: calc(var(--index) * 16 / 25);
+        --ds-20: calc(var(--index) * 20 / 25);
+        --ds-24: calc(var(--index) * 24 / 25);
+        --ds-28: calc(var(--index) * 28 / 25);
+        --ds-30: calc(var(--index) * 30 / 25);
+        --ds-32: calc(var(--index) * 32 / 25);
+        --ds-38: calc(var(--index) * 38 / 25);
+        --ds-40: calc(var(--index) * 40 / 25);
+        --ds-50: calc(var(--index) * 50 / 25);
+        --ds-56: calc(var(--index) * 56 / 25);
+        --ds-72: calc(var(--index) * 72 / 25);
+        --ds-77: calc(var(--index) * 77 / 25);
+        --ds-80: calc(var(--index) * 80 / 25);
+        --ds-83: calc(var(--index) * 83 / 25);
+        --ds-82: calc(var(--index) * 82 / 25);
+        --ds-116: calc(var(--index) * 116 / 25);
+        --ds-117: calc(var(--index) * 117 / 25);
+        --ds-122: calc(var(--index) * 122 / 25);
+        --ds-124: calc(var(--index) * 124 / 25);
+        --ds-140: calc(var(--index) * 140 / 25);
+        --ds-157: calc(var(--index) * 157 / 25);
+        --ds-160: calc(var(--index) * 160 / 25);
+        --ds-180: calc(var(--index) * 180 / 25);
+        --ds-203: calc(var(--index) * 203 / 25);
+        --ds-210: calc(var(--index) * 210 / 25);
+        --ds-255: calc(var(--index) * 255 / 25);
+        --ds-244: calc(var(--index) * 244 / 25);
+        --ds-1100: calc(var(--index) * 1100 / 25);
+        --ds-1200: calc(var(--index) * 1200 / 25);
+
+        --fluid-7: clamp(0.375rem, calc(var(--index) * 7 / 25), 0.4375rem);
+        --fluid-10: clamp(0.5625rem, calc(var(--index) * 10 / 25), 0.625rem);
+        --fluid-12: clamp(0.6875rem, calc(var(--index) * 12 / 25), 0.75rem);
+        --fluid-13: clamp(0.75rem, calc(var(--index) * 13 / 25), 0.8125rem);
+        --fluid-15: clamp(0.8125rem, calc(var(--index) * 15 / 25), 0.9375rem);
+        --fluid-18: clamp(0.9375rem, calc(var(--index) * 18 / 25), 1.125rem);
+        --fluid-19: clamp(1rem, calc(var(--index) * 19 / 25), 1.1875rem);
+        --fluid-22: clamp(1.125rem, calc(var(--index) * 22 / 25), 1.375rem);
+        --fluid-24: clamp(1.25rem, calc(var(--index) * 24 / 25), 1.5rem);
+        --fluid-32: clamp(1.5rem, calc(var(--index) * 32 / 25), 2rem);
+        --fluid-40: clamp(1.875rem, calc(var(--index) * 40 / 25), 2.5rem);
+        --fluid-control-42: clamp(2.25rem, calc(var(--index) * 42 / 25), 2.625rem);
+        --fluid-control-46: clamp(2.5rem, calc(var(--index) * 46 / 25), 2.875rem);
+        --fluid-control-50: clamp(2.625rem, calc(var(--index) * 50 / 25), 3.125rem);
+        --fluid-block-72: clamp(3.5rem, calc(var(--index) * 72 / 25), 4.5rem);
+        --fluid-block-100: clamp(4.75rem, calc(var(--index) * 100 / 25), 6.25rem);
+        --fluid-block-157: clamp(7.25rem, calc(var(--index) * 157 / 25), 9.8125rem);
+    }
+}
+
+/* Margin */
+@utility m-ds-* {
+    margin: calc(var(--index) * --value(number) / 25);
+}
+
+@utility mx-ds-* {
+    margin-left: calc(var(--index) * --value(number) / 25);
+    margin-right: calc(var(--index) * --value(number) / 25);
+}
+
+@utility my-ds-* {
+    margin-top: calc(var(--index) * --value(number) / 25);
+    margin-bottom: calc(var(--index) * --value(number) / 25);
+}
+
+@utility mt-ds-* {
+    margin-top: calc(var(--index) * --value(number) / 25);
+}
+
+@utility mb-ds-* {
+    margin-bottom: calc(var(--index) * --value(number) / 25);
+}
+
+@utility ml-ds-* {
+    margin-left: calc(var(--index) * --value(number) / 25);
+}
+
+@utility mr-ds-* {
+    margin-right: calc(var(--index) * --value(number) / 25);
+}
+
+/* Padding */
+@utility p-ds-* {
+    padding: calc(var(--index) * --value(number) / 25);
+}
+
+@utility px-ds-* {
+    padding-left: calc(var(--index) * --value(number) / 25);
+    padding-right: calc(var(--index) * --value(number) / 25);
+}
+
+@utility py-ds-* {
+    padding-top: calc(var(--index) * --value(number) / 25);
+    padding-bottom: calc(var(--index) * --value(number) / 25);
+}
+
+@utility pt-ds-* {
+    padding-top: calc(var(--index) * --value(number) / 25);
+}
+
+@utility pb-ds-* {
+    padding-bottom: calc(var(--index) * --value(number) / 25);
+}
+
+@utility pl-ds-* {
+    padding-left: calc(var(--index) * --value(number) / 25);
+}
+
+@utility pr-ds-* {
+    padding-right: calc(var(--index) * --value(number) / 25);
+}
+
+/* Gap */
+@utility gap-ds-* {
+    gap: calc(var(--index) * --value(number) / 25);
+}
+
+@utility gap-x-ds-* {
+    column-gap: calc(var(--index) * --value(number) / 25);
+}
+
+@utility gap-y-ds-* {
+    row-gap: calc(var(--index) * --value(number) / 25);
+}
+
+/* Sizing */
+@utility w-ds-* {
+    width: calc(var(--index) * --value(number) / 25);
+}
+
+@utility h-ds-* {
+    height: calc(var(--index) * --value(number) / 25);
+}
+
+@utility size-ds-* {
+    width: calc(var(--index) * --value(number) / 25);
+    height: calc(var(--index) * --value(number) / 25);
+}
+
+@utility min-w-ds-* {
+    min-width: calc(var(--index) * --value(number) / 25);
+}
+
+@utility min-h-ds-* {
+    min-height: calc(var(--index) * --value(number) / 25);
+}
+
+@utility max-w-ds-* {
+    max-width: calc(var(--index) * --value(number) / 25);
+}
+
+@utility max-h-ds-* {
+    max-height: calc(var(--index) * --value(number) / 25);
+}
+
+/* Position */
+@utility inset-ds-* {
+    inset: calc(var(--index) * --value(number) / 25);
+}
+
+@utility top-ds-* {
+    top: calc(var(--index) * --value(number) / 25);
+}
+
+@utility bottom-ds-* {
+    bottom: calc(var(--index) * --value(number) / 25);
+}
+
+@utility left-ds-* {
+    left: calc(var(--index) * --value(number) / 25);
+}
+
+@utility right-ds-* {
+    right: calc(var(--index) * --value(number) / 25);
+}
+
+/* Typography */
+@utility text-ds-* {
+    font-size: calc(var(--index) * --value(number) / 25);
+    line-height: 1.4;
+}
+
+@utility leading-ds-* {
+    line-height: calc(var(--index) * --value(number) / 25);
+}
+
+/* Border radius */
+@utility rounded-ds-* {
+    border-radius: calc(var(--index) * --value(number) / 25);
+}
+
+@utility rounded-t-ds-* {
+    border-top-left-radius: calc(var(--index) * --value(number) / 25);
+    border-top-right-radius: calc(var(--index) * --value(number) / 25);
+}
+
+@utility rounded-b-ds-* {
+    border-bottom-right-radius: calc(var(--index) * --value(number) / 25);
+    border-bottom-left-radius: calc(var(--index) * --value(number) / 25);
+}
+
+@utility rounded-l-ds-* {
+    border-top-left-radius: calc(var(--index) * --value(number) / 25);
+    border-bottom-left-radius: calc(var(--index) * --value(number) / 25);
+}
+
+@utility rounded-r-ds-* {
+    border-top-right-radius: calc(var(--index) * --value(number) / 25);
+    border-bottom-right-radius: calc(var(--index) * --value(number) / 25);
+}
+
+@utility space-y-ds-* {
+    &> :not(:last-child) {
+        --tw-space-y-reverse: 0;
+        margin-block-start: calc(calc(var(--index) * --value(number) / 25) * var(--tw-space-y-reverse));
+        margin-block-end: calc(calc(var(--index) * --value(number) / 25) * calc(1 - var(--tw-space-y-reverse)));
+    }
+}
+
+@utility space-x-ds-* {
+    &> :not(:last-child) {
+        --tw-space-x-reverse: 0;
+        margin-inline-start: calc(calc(var(--index) * --value(number) / 25) * var(--tw-space-x-reverse));
+        margin-inline-end: calc(calc(var(--index) * --value(number) / 25) * calc(1 - var(--tw-space-x-reverse)));
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}
